@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Стили для структурированных описаний проектов */
+.project-task {
+    color: #3498db; /* Синий цвет акцента */
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.project-role {
+    color: #ff6b35; /* Оранжевый цвет как у HH */
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.text-neutral {
+    color: #5a6c7d; /* Серый цвет как в контактах */
+    /* или: color: #2c3e50; для чуть темнее */
+}
+
+
+/* Профиль - обновлённая версия с контактами в 2 колонки */
+.profile-section {
+    display: flex;
+    align-items: center; /* Выравнивание по центру вертикально */
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    gap: 40px;
+}
+
+.profile-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование содержимого */
+}
+
+.profile-header {
+    margin-bottom: 25px;
+}
+
+.photo-container {
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-image: url('аватар.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+/* Контакты в профиле - 2 колонки */
+.profile-contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-item-compact {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-item-compact i {
+    font-size: 1.1rem;
+    color: #3498db;
+    width: 36px;
+    height: 36px;
+    background-color: #eef5ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-item-compact .contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item-compact .contact-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #5a6c7d;
+    margin-bottom: 4px;
+}
+
+.contact-item-compact .contact-text p {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+/* Убираем соцсети */
+.social-links {
+    display: none;
+}
+
+/*.experience-footer {
+    padding: 0 25px 25px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 10px;
+}*/
+
+.hh-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    /*border-left: 4px solid #ff6b35; /* Оранжевый цвет как у HH */
+    margin-top: 15px;
+}
+
+.hh-link i {
+    color: #ff6b35;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.hh-link p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.hh-link-text {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hh-link-text:hover {
+    color: #e55a2b;
+    background-color: rgba(255, 107, 53, 0.1);
+    text-decoration: underline;
+}
+
+.hh-link-text:after {
+    content: " ↗";
+    font-size: 0.9em;
+}
+
+/* Аккордеон */
+.accordion-section {
+    margin-bottom: 40px;
+}
+
+.accordion {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.accordion:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-header {
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: rgba(240, 244, 248, 0.5);
+}
+
+.accordion-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.accordion-header i {
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+.accordion-icon {
+    font-size: 1.8rem;
+    color: #3498db;
+    font-weight: 500;
+    transition: transform 0.3s;
+}
+
+.accordion.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    border-top: 1px solid #eee;
+}
+
+.accordion.active .accordion-content {
+    max-height: 2000px;
+}
+
+/* Контент внутри аккордеона */
+.timeline {
+    padding: 25px;
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.timeline-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+.portfolio-item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.portfolio-item:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-img_1 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('1крымский.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_2 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('крым24.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_3 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('радиоточка.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_4 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('радиокрым.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_5 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('втб_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_6 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('рнкб.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_7 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('рнкб_2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_8 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('трккрым_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-img_9 
+{
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url('храмы.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-item h3 
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.skills-container 
+{
+    padding: 25px;
+}
+
+.skills-grid {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-category h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #eef5ff;
+    color: #3498db;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: left;
+        padding: 25px;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .photo-container {
+        order: 1;
+        margin: 0;
+        flex-shrink: 0;
+        max-width: 100%; 
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+    }
+    
+    .profile-content {
+        order: 2;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-header {
+        text-align: center;
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .profile-contacts {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-item-compact {
+        width: 100%;
+        max-width: none;
+        text-align: left;
+    }
+
+    .experience-footer {
+        padding: 0 20px 20px;
+    }
+
+    .hh-link {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .hh-link p {
+        font-size: 0.9rem;
+    }
+
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .accordion-header {
+        padding: 18px 20px;
+    }
+    
+    .accordion-header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-container {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .profile-section {
+        padding: 20px;
+    }
+    
+    .contact-item-compact i {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    
+    .contact-item-compact .contact-text h4 {
+        font-size: 0.8rem;
+    }
+    
+    .contact-item-compact .contact-text p {
+        font-size: 0.9rem;
+    }
+    
+    .profile-contacts {
+        gap: 15px;
+    }
+}
