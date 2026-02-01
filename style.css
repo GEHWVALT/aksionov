@@ -73,7 +73,7 @@ body {
     overflow: hidden;
     border: 5px solid white;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    background-image: url('аватар.jpg');
+    background-image: url('./images/аватар.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -344,7 +344,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('1крымский.jpg');
+    background-image: url('./images/1крымский.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -354,7 +354,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('крым24.jpg');
+    background-image: url('./images/крым24.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -364,7 +364,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('радиоточка.jpg');
+    background-image: url('./images/радиоточка.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -374,7 +374,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('радиокрым.jpg');
+    background-image: url('./images/радиокрым.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -384,7 +384,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('втб_1.jpg');
+    background-image: url('./images/втб_1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -394,7 +394,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('рнкб.jpg');
+    background-image: url('./images/рнкб.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -404,7 +404,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('рнкб_2.jpg');
+    background-image: url('./images/рнкб_2.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -414,7 +414,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('трккрым_1.jpg');
+    background-image: url('./images/трккрым_1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -424,7 +424,7 @@ h1 {
     height: 150px;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url('храмы.jpg');
+    background-image: url('./images/храмы.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -612,4 +612,6 @@ footer {
     .profile-contacts {
         gap: 15px;
     }
+}
+
 }
